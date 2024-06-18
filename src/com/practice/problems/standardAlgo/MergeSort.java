@@ -1,4 +1,4 @@
-package com.practice.problems;
+package com.practice.problems.standardAlgo;
 
 public class MergeSort {
     public static void main(String[] args) {

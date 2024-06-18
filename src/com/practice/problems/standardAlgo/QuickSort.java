@@ -1,4 +1,4 @@
-package com.practice.problems;
+package com.practice.problems.standardAlgo;
 
 public class QuickSort {
 
@@ -28,18 +28,18 @@ public class QuickSort {
         int pivot = arr[high];
 
         //pointer 1 : left most position
-        int i= low-1;
+        int i= low;
 
         //pointer 2 : leftmost +1 positon
         //check if element is less than pivot then increment i and swap it with i th index if greater than pivote no change.
         for (int j = low; j < high; j++) {
             if(arr[j]< pivot){
-               i++;
                swap(arr, i,j);
+                i++;
             }
         }
-        swap(arr, i+1, high);
-        return (i+1);
+        swap(arr, i, high);
+        return (i);
 
 
     }

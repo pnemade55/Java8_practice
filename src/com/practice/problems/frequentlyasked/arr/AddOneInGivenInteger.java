@@ -1,11 +1,9 @@
-package com.practice.problems;
+package com.practice.problems.frequentlyasked.arr;
 
-import java.util.Arrays;
-
-public class PlusOne {
+public class AddOneInGivenInteger {
 
     public static void main(String[] args) {
-        int digits[]= {9,9,9,9};
+        int digits[]= {9,0,9,9};
        int result[]=  plus1(digits);
      for(int n : result)
          System.out.print(n +" , ");

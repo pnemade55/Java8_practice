@@ -1,4 +1,4 @@
-package com.practice.problems;
+package com.practice.problems.frequentlyasked.arr;
 
 import java.util.Arrays;
 import java.util.List;
@@ -6,11 +6,11 @@ import java.util.stream.Collectors;
 
 public class GCPDemo {
     public static void main(String[] args) {
-        int[] nums = {7,5,6,8,3};
+        int[] nums = {12,9,6,24,3};
 
         List<Integer> listOfIntegers= Arrays.stream(nums).boxed().collect(Collectors.toList());
 
-    int max=   listOfIntegers
+        int max=listOfIntegers
                 .stream()
                 .mapToInt(a -> a)
                 .max().orElse(0);

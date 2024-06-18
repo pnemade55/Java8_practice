@@ -1,9 +1,8 @@
-package com.practice.problems;
+package com.practice.problems.standardAlgo;
 
 public class BinarySearch {
     public static void main(String[] args) {
         int[] arr={20,15,18,21,25,87,91,99};
-
         int search = 55;
 
         int index= binarySearch(arr, search, 0, arr.length-1);
