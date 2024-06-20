@@ -27,7 +27,7 @@ public class NthSalaryFromMap {
                                                             .sorted(Comparator.comparing(Map.Entry::getValue,Comparator.reverseOrder()))
                                                             .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1,e2) -> e1,LinkedHashMap::new));
 
-       String person = sortedBySalary.entrySet().stream().skip(1).findFirst().orElse(null).getKey();
+       String person = sortedBySalary.entrySet().stream().skip(n-1).findFirst().orElse(null).getKey();
 
        return person;
     }
