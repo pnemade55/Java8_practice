@@ -7,7 +7,7 @@ public class SumOfAllOddOrEvenLengthArrays {
         sumOfAllOddLengthArrays(arr, len);
 
         //Need to Work on Even length array pairs
-      //  sumOfAllEvenLengthArrays(arr, len);
+        sumOfAllEvenLengthArrays(arr, len);
 
     }
     private static void sumOfAllEvenLengthArrays(int[] arr, int len) {
@@ -31,7 +31,7 @@ public class SumOfAllOddOrEvenLengthArrays {
         int sum=0;
         for(int i = 0; i< len; i++){
 
-            for (int j = i; j < len; j+=2) {
+            for (int j = i+1; j < len; j+=2) {
 
                 for (int k = i; k <=j; k++) {
                    System.out.print(arr[k]+" , ");

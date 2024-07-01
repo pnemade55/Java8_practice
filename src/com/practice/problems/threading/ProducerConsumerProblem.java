@@ -35,7 +35,7 @@ class Producer extends Thread{
                     queue.put(1);
                     System.out.println("Produced resource - Queue size now = " + queue.size());
                     if(i%2==0){
-                        Thread.sleep(500);
+                        Thread.sleep(200);
                     }
                 }
             }

@@ -11,7 +11,6 @@ public class countCharFeq {
 
     public static void main(String[] args) {
         String input= "java is my favorite Language";
-        char c='a';
 
        Optional<Integer> result =  input.chars()
                 .boxed()
@@ -22,12 +21,10 @@ public class countCharFeq {
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,(a,b)-> a, LinkedHashMap::new))
                 .entrySet()
                 .stream()
-               .map(e-> e.getKey())
+                .map(e-> e.getKey())
                 .findFirst();
 
-
-
-        char r = (char) (int)result.get();
+       char r = (char) (int)result.get();
        System.out.println(r);
     }
 }

@@ -15,11 +15,23 @@ public class DuplicateCharactersAndCount {
 
             duplicateCharacter.entrySet().stream().forEach(e -> System.out.print("[" + e.getKey()+","+e.getValue()+ "] "));
 
+            String input2="of IT world I am a soldier of a java programming";
+            Map<String,Long> abc = Arrays.stream(input2.split("\\s+"))
+                    .collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting()))
+                    .entrySet()
+                    .stream()
+                    .filter(e -> e.getValue()%2==0)
+                    .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+
+            System.out.println(abc.entrySet().stream().findFirst().get());
+
+
+
     }
 
     private static Map<String,Long> findDuplicateChracterCount(String input) {
 
-        Map<String,Long> abc=   Arrays.stream(input.split(""))
+        Map<String,Long> abc=Arrays.stream(input.split(""))
                 .collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting()))
                 .entrySet()
                 .stream()

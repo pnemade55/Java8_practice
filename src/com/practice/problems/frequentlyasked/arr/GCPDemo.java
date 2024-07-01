@@ -18,7 +18,7 @@ public class GCPDemo {
 
         int min=   listOfIntegers
                 .stream()
-                .mapToInt(a -> a)
+                .mapToInt(Integer::intValue)
                 .min().orElse(0);
 
         System.out.println(max +","+min);

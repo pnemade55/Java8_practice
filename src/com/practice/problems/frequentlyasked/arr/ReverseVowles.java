@@ -2,7 +2,7 @@ package com.practice.problems.frequentlyasked.arr;
 
 public class ReverseVowles {
     public static void main(String[] args) {
-        System.out.println(reverseVow("aA"));
+        System.out.println(reverseVow("Iamjohn"));  //aA
     }
 
     public static String reverseVow(String s) {

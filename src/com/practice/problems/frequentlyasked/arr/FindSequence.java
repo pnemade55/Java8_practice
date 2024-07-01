@@ -6,7 +6,7 @@ public class FindSequence {
 
     public static void main(String[] args) {
         //find the continuous sequence number
-        String inputArr[] = {"1", "2","3","5","9", "a", "6", "7" ,"8" ,"4" ,"@", "-5", "-7" ,"-3", "-2" ,"-1"};
+        String inputArr[] = {"1", "2","3","4","9", "a", "6", "7" ,"8" ,"4" ,"@", "-5", "-7" ,"-3", "-2" ,"-1"};
         int array[]  = Arrays.stream(inputArr).filter(in->{
             boolean out = true;
             try {

@@ -3,11 +3,11 @@ package com.practice.problems.frequentlyasked.arr;
 public class ZeroLeftOneRightSide {
 
     public static void main(String[] args) {
-        Integer arr[] = {1,1,0,1,0,0,1,1,1,0 };
+        Integer arr[] = {0,1,0,1,1,1,1,0,1};
         ///-> output : [0,0,1,1,1]
 
        // Arrays.stream(arr).sorted().forEach(System.out::println);
-        //or
+        // or
 
         swapArr(arr);
 
@@ -22,7 +22,6 @@ public class ZeroLeftOneRightSide {
                     int temp = arr[i];
                     arr[i] = arr[j];
                     arr[j] = temp;
-                    i++;
                 }
                 j--;
             }else{
