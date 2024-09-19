@@ -16,7 +16,7 @@ public class UniqueElementInStr {
 
         return Arrays.stream(input.split(""))
                 .distinct()
-                .sorted(String::compareTo)
+                //.sorted(String::compareTo)
                 .collect(Collectors.toList());
     }
 }

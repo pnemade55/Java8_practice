@@ -32,10 +32,10 @@ class Producer extends Thread{
         try {
             while (true) {
                 for (int i = 0; i < 10; i++) {
-                    queue.put(1);
+                    queue.put(i);
                     System.out.println("Produced resource - Queue size now = " + queue.size());
                     if(i%2==0){
-                        Thread.sleep(200);
+                       // Thread.sleep(200);
                     }
                 }
             }

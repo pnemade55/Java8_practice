@@ -14,7 +14,7 @@ public class OddEvenPrintMultipleThreads {
             // Print number till the N
             while (counter < N) {
 
-                // If count is even then print
+                // If count is even then wait
                 while (counter % 2 == 0) {
 
                     // Exception handle
@@ -27,7 +27,7 @@ public class OddEvenPrintMultipleThreads {
                     }
                 }
 
-                // Print the number
+                // Print the odd number
                 System.out.println("ODD_THREAD : "+counter + " ");
 
                 // Increment counter
@@ -47,7 +47,7 @@ public class OddEvenPrintMultipleThreads {
             // Print number till the N
             while (counter < N) {
 
-                // If count is odd then print
+                // If count is odd then wait
                 while (counter % 2 == 1) {
 
                     // Exception handle
@@ -60,7 +60,7 @@ public class OddEvenPrintMultipleThreads {
                     }
                 }
 
-                // Print the number
+                // Print the odd number
                 System.out.println( "EVEN_THREAD : "+
                         counter + " ");
 

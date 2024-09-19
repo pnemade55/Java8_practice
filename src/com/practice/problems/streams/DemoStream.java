@@ -9,10 +9,20 @@ public class DemoStream {
         class  Student {
            private int id;
             private String name;
-            Student(int i, String j){
+            private int age;
+            Student(int i, String j, int k){
                 id=i;
                 name=j;
+                age=k;
 
+            }
+
+            public int getAge() {
+                return age;
+            }
+
+            public void setAge(int age) {
+                this.age = age;
             }
 
             public int getId() {
@@ -30,13 +40,48 @@ public class DemoStream {
             public void setName(String name) {
                 this.name = name;
             }
-        }
-        List<Student> lt = new ArrayList<>();
-        // add the member of list
-        lt.add(new Student(1, "Geeks"));
-        lt.add(new Student(2, "For"));
 
-        LinkedHashMap<Integer, String> students = lt.stream()
+            @Override
+            public String toString() {
+                return "Student{" +
+                        "id=" + id +
+                        ", name='" + name + '\'' +
+                        ", age=" + age +
+                        '}';
+            }
+        }
+        List<Student> std = new ArrayList<>();
+        // add the member of list
+        std.add(new Student(1, "ajay",1993));
+        std.add(new Student(2, "parag",1993));
+        std.add(new Student(3, "abhijeet",1992 ));
+        std.add(new Student(4, "tejas",1994));
+        std.add(new Student(5, "sumit",1991));
+        std.add(new Student(6, "akshay",1990));
+
+
+        //Sorting based on salary:
+       List<Student> sorted=  std.stream()
+                .sorted(Comparator.comparingDouble(Student::getAge))
+                .collect(Collectors.toList());
+
+       System.out.println(sorted);
+
+        // return 3rd highest salary
+
+       String studentName=  std.stream()
+                .sorted(Comparator.comparingDouble(Student::getAge).reversed())
+                .skip(2)
+                .findFirst()
+                .get()
+                .getName();
+
+       System.out.println(studentName);
+
+
+        //
+
+        LinkedHashMap<Integer, String> students = std.stream()
                 .collect(Collectors.toMap(
                         s -> s.getId(), s -> s.name, (x, y)-> x + ", " + y, LinkedHashMap::new));
 

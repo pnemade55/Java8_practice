@@ -1,4 +1,4 @@
-package com.Leetcode.intersectionOfArrays;
+package com.practice.problems.frequentlyasked.arr;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -18,6 +18,7 @@ public class ArrayIntersection {
         if(nums1.length > nums2.length){
             return intersect(nums2, nums1);
         }
+
         Map<Integer, Integer> map = new HashMap<>();
         for(int n : nums1){
             map.put(n, map.getOrDefault(n,0)+1);
